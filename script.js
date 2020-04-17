@@ -27,26 +27,3 @@ var questions = [
         a: 1
     }
 ];
-
-// Functions for display
-function startQuiz() {
-
-    for (i = 75; i >= time; i--) {
-        console.log(i)
-    }
-
-    console.log(questions)
-}
-
-
-
-function runQuiz() {
-    
-}
-
-
-// Add event listener to button
-
-startBtn.addEventListener("click", startQuiz)
-
-// Timer in the left corner 
