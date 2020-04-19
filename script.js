@@ -1,29 +1,46 @@
-// Global variables
-var qtnDisplay = document.querySelector("#question-ask")
-var ansDisplay = document.querySelector("#answers")
-var frontPage = document.getElementsByClassName("front-page-container")
-var qtnContainer = document.querySelector("questions-container")
-var startBtn = document.getElementById("start")
-var timerVar = document.querySelector("time")
-var score = 0;
-var time = 0;
-
-
 // Questions
 var questions = [
     {
-        t: "Who invented JavaScript?",
+        q: "Who invented JavaScript?",
         c: ["Douglas Crockford", "Sheryl Sandberg", "Brendan Eich"],
         a: 2
     },
     {
-        t: "What is the HTML tag under which one can write the JavaScript code?",
-        c: ["<javascript>", "<scripted>", "<script>", "<js>"],
+        q: "What is the HTML tag under which one can write the JavaScript code?",
+        c: ["javascript", "scripted", "script", "js"],
         a: 2
     },
     {
-        t: "How do you create function in Javascript?",
+        q: "How do you create function in Javascript?",
         c: ["function myFunction()", "function = myFunction()", "function:myFunction()"],
         a: 1
     }
 ];
+
+
+// When page starts
+$(document).ready(function() {
+    // Logs on load
+    console.log('Ready')
+    var titleContainer = $("")
+    var qtnContainer = $("")
+
+    $("start-btn").on("click", function() {
+        timeRun()
+        console.log("Start Button Pressed")
+    })
+    function timeRun() {
+
+    }
+
+    $("high-scores").on("click", function() {
+
+        console.log(score)
+        console.log("High Scores")
+    })
+
+    $(".btn-clicked").on("click", function() {
+        console.log("Any button clicked")
+    })
+
+}) 
